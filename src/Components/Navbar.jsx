@@ -50,7 +50,7 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <form onSubmit={handleSubmit} className="relative flex items-center">
+      <form onSubmit={handleSubmit} className="relative hidden md:flex items-center">
         <input
           type="text"
           placeholder="Search..."
@@ -64,7 +64,7 @@ const Navbar = () => {
       <div className='flex items-center space-x-6'>
       <RouterLink
         to="/login"
-        className=" hidden md:flex cursor-pointer px-4 py-1 rounded-lg bg-orange-400 hover:text-blue-500 hover:scale-105 transition-transform duration-300 text-xl
+        className=" flex cursor-pointer px-4 py-1 rounded-lg bg-orange-400 hover:text-blue-500 hover:scale-105 transition-transform duration-300 text-xl
         text-white font-serif"
       >
         Login
