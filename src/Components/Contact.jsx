@@ -30,7 +30,7 @@ const LevisFooter = () => {
           <h3 className="text-lg font-semibold mb-4">QUICK LINKS</h3>
           <ul className="space-y-1 text-sm text-black/55">
             {["Men's Jeans", "Women’s Jeans", "Men’s T-shirts", "Women’s Tops", "Footwear", "Men’s Jackets", "Red Tab Member Program", "Store Locator"].map((item, index) => (
-              <li key={index} className="hover:text-white cursor-pointer">{item}</li>
+              <li key={index} ><a className="hover:text-black transition duration-300" >{item}</a></li>
             ))}
           </ul>
         </motion.div>
