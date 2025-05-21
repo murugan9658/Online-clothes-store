@@ -22,13 +22,13 @@ function AddCartPage() {
       <h2 className="text-2xl font-semibold mb-6">Your Cart</h2>
       <div>
                 {cartItems.map((item) => (
-          <div key={item.id} className="flex relative justify-between items-center mb-4 border-b py-5">
+          <div key={item.id} className="flex md:flex-row flex-col  relative justify-between items-center space-y-3 mb-4 border-b py-5">
              
             
             {/* Product details */}       
 
             <div>
-              <img src={item.image} alt={item.name} className="w-40 h-50 rounded-md" />
+              <img src={item.image} alt={item.name} className="md:w-40 md:h-50  w-50 h-50 rounded-md" />
             </div>
             <div className="flex-1 ml-14 text-2xl space-y-2.5 font-semibold">
               <h3 className="italic">NAME: {item.name}</h3>
