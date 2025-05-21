@@ -48,7 +48,7 @@ const LandingSlider = () => {
   }, [index]);
 
   return (
-    <div className="relative w-full h-screen   bg-gray-500 overflow-hidden">
+    <div className="relative w-full md:h-screen h-[70vh]   bg-gray-500 overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={slides[index].id}
@@ -72,7 +72,7 @@ const LandingSlider = () => {
                 initial={{ opacity: 0, x: 60 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="relative z-10 flex-col space-y-14  px-6 text-center   md:ml-32    text-white max-w-xl "
+                className="relative z-10 flex-col md:space-y-14 space-y-8  px-6 text-center   md:ml-32    text-white max-w-xl "
               >
                 <h2 className="text-3xl md:text-5xl font-bold hover:scale-105 duration-300">{slides[index].title}</h2>
                 <p className=" text-base italic md:text-lg">{slides[index].desc}</p>
