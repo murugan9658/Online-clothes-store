@@ -21,13 +21,13 @@ const fadeIn = {
 
 const LevisFooter = () => {
   return (
-    <div   className="bg-gray-100 shadow-md text-black/90 pt-10 ">
+    <div   className="bg-gray-200 shadow-md text-black/90 pt-10 ">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 px-6 pb-4 md:px-20 ">
         {/* About Section */}
         <motion.div custom={0} initial="hidden" animate="visible" variants={fadeIn}>
           <h3 className="text-lg font-semibold mb-4">MORE ABOUT GV FASHION STORE</h3>
           <p className="text-sm text-black/55">
-            Discover authentic Levi’s denim & clothing. Shop now for timeless style, comfort, and quality.
+            Discover authentic Gv’s denim & clothing. Shop now for timeless style, comfort, and quality.
           </p>
         </motion.div>
 
@@ -43,27 +43,27 @@ const LevisFooter = () => {
 
         {/* Support */}
         <motion.div custom={2} initial="hidden" animate="visible" variants={fadeIn}>
-          <h3 className="text-lg font-semibold mb-4">SUPPORT</h3>
-          <ul className="space-y-1 text-sm text-black/55">
-            <li>Help</li>
-            <li>Returns & Exchanges</li>
-            <li>Shipping</li>
-            <li>About Us</li>
+          <h3 className="text-lg font-semibold  mb-4">SUPPORT</h3>
+          <ul className="space-y-1 text-sm text-black/55 ">
+            <li className="hover:text-black transition duration-300">Help</li>
+            <li className="hover:text-black transition duration-300">Returns & Exchanges</li>
+            <li className="hover:text-black transition duration-300">Shipping</li>
+            <li className="hover:text-black transition duration-300">About Us</li>
           </ul>
 
           <h4 className="text-md font-semibold mt-4">CONTACT</h4>
           <ul className="text-sm mt-1 space-y-1 text-black/55">
-            <li>📧 <span className="font-medium">Customer Care:</span> customercare@levi.in</li>
-            <li>📧 <span className="font-medium">Escalation:</span> feedbacklevi@levi.in</li>
-            <li>📞 <span className="font-medium">Online Orders:</span> 1800-123-5384</li>
-            <li>📞 <span className="font-medium">Store Queries:</span> 1800-1020-501</li>
-            <li>🕙 <span className="font-medium">Mon–Sat:</span> 10AM – 6PM</li>
+            <li className="hover:text-black transition duration-300">📧 <span className="font-medium">Customer Care:</span> customercare@GV fashion.in</li>
+            <li className="hover:text-black transition duration-300">📧 <span className="font-medium">Escalation:</span> feedback@GV fashion.in</li>
+            <li className="hover:text-black transition duration-300">📞 <span className="font-medium">Online Orders:</span> 1800-123-5384</li>
+            <li className="hover:text-black transition duration-300">📞 <span className="font-medium">Store Queries:</span> 1800-1020-501</li>
+            <li className="hover:text-black transition duration-300">🕙 <span className="font-medium">Mon–Sat:</span> 10AM – 6PM</li>
           </ul>
         </motion.div>
 
         {/* Subscribe */}
         <motion.div custom={3} initial="hidden" animate="visible" variants={fadeIn}>
-          <h3 className="text-lg font-semibold mb-4">IT’S ALL ABOUT GV FASHION STORE</h3>
+          <h3 className="text-lg font-semibold text-green-500 mb-4">Subscribe GV FASHION STORE</h3>
           <form className="space-y-3">
             <input
               type="email"
@@ -82,7 +82,7 @@ const LevisFooter = () => {
           </form>
         </motion.div>
       </div>
-     <footer className='flex md:flex-row flex-col  items-center  justify-center gap-4 bg-gray-300  p-4'>
+     <footer className='flex md:flex-row flex-col  items-center  justify-center gap-4 bg-gray-400  p-4'>
                    <div>
                    <p className='md:text-lg  font-semibold'>&copy; {new Date().getFullYear()} E-commerce clothes store    ||</p>
                    </div>
