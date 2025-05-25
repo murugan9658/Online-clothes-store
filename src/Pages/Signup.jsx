@@ -37,7 +37,7 @@ function SignupPage() {
   };
 
   return (
-    <motion.div className="flex justify-center px-4 items-center  md:h-screen bg-gray-100"
+    <motion.div className="flex justify-center px-4 py-14 items-center   md:h-screen bg-gray-100"
         initial={{ x:-30 ,opacity:0.5}}
         animate={{x:0, opacity:1}}
         transition={{duration:0.6, ease:"easeOut"}}
