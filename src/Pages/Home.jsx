@@ -9,11 +9,11 @@ import LandingSlider from '../Components/Hero';
 
 const Home = () => {
   return (
-    <div className='space-y-10'> 
+    <div > 
         <Element name="hero" className="element">
             <LandingSlider />
         </Element>
-        <Element name="ImageSlider" className="element  my-18">
+        <Element name="ImageSlider" className="element py-15">
             <ImageSlider />
         </Element>
 
@@ -21,7 +21,7 @@ const Home = () => {
             <ProductList />
         </Element>
 
-        <Element name="ReviewSlider" className="element">
+        <Element name="ReviewSlider" className="element py-10">
             <ReviewSlider />
         </Element>
         <Element name="contact" className="element">
