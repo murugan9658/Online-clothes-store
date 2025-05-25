@@ -29,7 +29,7 @@ function LoginPage() {
   };
 
   return (
-    <motion.div className="flex justify-center items-center md:h-screen px-4 py-14 bg-gray-100"
+    <motion.div className="flex justify-center items-center h-[80vh] md:h-screen px-4 py-14 bg-gray-100"
       initial={{ x:30 ,opacity:0.5}}
       animate={{x:0, opacity:1}}
       transition={{duration:0.6, ease:"easeOut"}}

@@ -11,6 +11,7 @@ import { CartProvider } from './contexts/CartContext'
 import AddCartPage from './Pages/AddCartPage'
 import ProductDetailPage from './Pages/ProductDetailpage'
 import PaymentPage from './Pages/PaymentPage'
+import LivesFooter from './Components/Contact'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                   <Route path='/payment/:id' element={<PaymentPage/>}  />
                 </Routes> 
             </Router>
+            <LivesFooter/>
       </CartProvider>
   </AuthProvider>
     
