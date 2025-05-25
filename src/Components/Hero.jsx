@@ -48,7 +48,7 @@ const LandingSlider = () => {
   }, [index]);
 
   return (
-    <div className="relative w-full md:h-screen h-[70vh]   bg-gray-500 overflow-hidden">
+    <div className="relative w-full md:h-screen h-[80vh]   bg-gray-500 overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={slides[index].id}
@@ -62,7 +62,7 @@ const LandingSlider = () => {
           <img
             src={slides[index].image}
             alt="slide"
-            className="absolute md:w-full h-full  "
+            className="absolute md:w-full md:object-center object-right h-full  "
             onLoad={() => setImageLoaded(true)}
           />
 
