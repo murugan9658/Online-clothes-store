@@ -1,5 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaFacebook } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -15,11 +21,11 @@ const fadeIn = {
 
 const LevisFooter = () => {
   return (
-    <div   className="bg-gray-100 shadow-md text-black/90 py-10 px-6 md:px-20 ">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+    <div   className="bg-gray-100 shadow-md text-black/90 pt-10 ">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 px-6 pb-4 md:px-20 ">
         {/* About Section */}
         <motion.div custom={0} initial="hidden" animate="visible" variants={fadeIn}>
-          <h3 className="text-lg font-semibold mb-4">MORE ABOUT LEVI’S INDIA STORE</h3>
+          <h3 className="text-lg font-semibold mb-4">MORE ABOUT GV FASHION STORE</h3>
           <p className="text-sm text-black/55">
             Discover authentic Levi’s denim & clothing. Shop now for timeless style, comfort, and quality.
           </p>
@@ -57,7 +63,7 @@ const LevisFooter = () => {
 
         {/* Subscribe */}
         <motion.div custom={3} initial="hidden" animate="visible" variants={fadeIn}>
-          <h3 className="text-lg font-semibold mb-4">IT’S ALL ABOUT THE PERKS</h3>
+          <h3 className="text-lg font-semibold mb-4">IT’S ALL ABOUT GV FASHION STORE</h3>
           <form className="space-y-3">
             <input
               type="email"
@@ -76,7 +82,22 @@ const LevisFooter = () => {
           </form>
         </motion.div>
       </div>
-
+     <footer className='flex md:flex-row flex-col  items-center  justify-center gap-4 bg-gray-300  p-4'>
+                   <div>
+                   <p className='md:text-lg  font-semibold'>&copy; {new Date().getFullYear()} E-commerce clothes store    ||</p>
+                   </div>
+                   <div className='pb-2 md:pb-0'>
+                      <ul className='flex flex-row gap-4 text-2xl'>
+                       <li className='text-blue-700'><FaFacebook /></li>
+                       <li className='text-red-500'><FaYoutube /></li>
+                      <li className='text-green-700'> <FaWhatsappSquare/></li>
+                       <li className='text-gray-600'><FaTwitter /></li>
+                       <li className='text-blue-500'><FaLinkedin /></li>
+                      <li className='text-pink-600/80'><FaInstagramSquare/></li>
+       
+                      </ul>
+                   </div>
+       </footer>
        
     </div>
 

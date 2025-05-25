@@ -4,7 +4,6 @@ import ProductList from '../Components/ProductList'
 import Contact from '../Components/Contact'
 import ImageSlider from '../Components/CategorySlide'
 import ReviewSlider from '../Components/ReviewSlide'
-import Footer from '../Components/Footer'
 import LandingSlider from '../Components/Hero';
 
 const Home = () => {
@@ -26,9 +25,7 @@ const Home = () => {
         </Element>
         <Element name="contact" className="element">
             <Contact />
-        </Element>
-        <Element name="footer" className="element">
-            <Footer />
+            
         </Element>
 
     </div>
