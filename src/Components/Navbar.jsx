@@ -10,12 +10,16 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import {AnimatePresence, motion} from "framer-motion";
 import { useCart } from '../hooks/useCart'; // Importing the custom hook to access cart context
+import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
 
 
 
 
 const Navbar = () => {
   const { cartItems } = useCart(); // Accessing cart items from CartContext
+   const location = useLocation();
+  const isHome = location.pathname === "/";
 
   const [query, setQuery] = React.useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -25,7 +29,7 @@ const Navbar = () => {
     onSearch(query);
   };
 
-
+  const createLink = (section) => (isHome ? `#${section}` : `/#${section}`);
 
   return (
     <nav className='flex sticky top-0 z-50 justify-between space-x-4 bg-gray-800 text-white p-4'>
@@ -37,13 +41,19 @@ const Navbar = () => {
 
       <ul className=" hidden md:flex space-x-4 text-lg font-semibold items-center">
         <li className='cursor-pointer hover:text-orange-400 hover:scale-105 transition duration-400'>
-          <ScrollLink to="hero" smooth={true} duration={500} offset={-70}>Home</ScrollLink>
+          <HashLink smooth to={createLink("hero")} >
+             Hero
+          </HashLink>
         </li>
         <li className='cursor-pointer hover:text-orange-400 hover:scale-105 transition duration-400'>
-        <ScrollLink to="product" smooth={true} duration={500}  offset={-70}>Products</ScrollLink>
+          <HashLink smooth to={createLink("product")} >
+            Product
+          </HashLink>
         </li>
         <li className='cursor-pointer hover:text-orange-400 hover:scale-105 transition duration-400'>
-        <ScrollLink to="ReviewSlider" smooth={true} duration={500} offset={-70} >Review</ScrollLink>
+          <HashLink smooth to={createLink("ReviewSlider")} >
+            Review
+          </HashLink>
         </li>
         <li className='cursor-pointer hover:text-orange-400 hover:scale-105 transition duration-400'>
         <ScrollLink to="contact" smooth={true} duration={700} offset={-70}  >Contact</ScrollLink>
@@ -117,13 +127,13 @@ const Navbar = () => {
            className="md:hidden absolute top-24 left-0 w-full h-64 bg-gray-800 opacity-90 text-white p-4 shadow-lg rounded-lg z-50">
           <ul className="flex flex-col items-center space-y-4 text-lg font-semibold">
             <li className='cursor-pointer hover:text-orange-400 hover:scale-105 transition duration-400'>
-              <ScrollLink to="hero" smooth={true} duration={700} offset={-70}  onClick={()=>setIsMobileMenuOpen(false)}>Home</ScrollLink>
+              <HashLink smooth to={createLink("hero")}  onClick={()=>setIsMobileMenuOpen(false)}>Home</HashLink>
             </li>
             <li className='cursor-pointer hover:text-orange-400 hover:scale-105 transition duration-400'>
-              <ScrollLink to="product" smooth={true} duration={700} offset={-70}  onClick={()=>setIsMobileMenuOpen(false)}>Products</ScrollLink>
+              <HashLink smooth to={createLink("product")}  onClick={()=>setIsMobileMenuOpen(false)}>Products</HashLink >
             </li>
             <li className='cursor-pointer hover:text-orange-400 hover:scale-105 transition duration-400'>
-              <ScrollLink to="ReviewSlider" smooth={true} duration={700} offset={-70}  onClick={()=>setIsMobileMenuOpen(false)} >Review</ScrollLink>
+              <HashLink smooth to={createLink("ReviewSlider")}  onClick={()=>setIsMobileMenuOpen(false)} >Review</HashLink>
             </li>
             <li className='cursor-pointer hover:text-orange-400 hover:scale-105 transition duration-400'>
               <ScrollLink to="contact" smooth={true} duration={700} offset={-70}  onClick={()=>setIsMobileMenuOpen(false)} >Contact</ScrollLink>
