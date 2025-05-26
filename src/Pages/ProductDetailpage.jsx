@@ -50,12 +50,12 @@ function ProductDetailPage() {
 
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center bg-gray-100">
       <motion.div 
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="bg-white mt-5 pt-4 pl-3 rounded-lg shadow-2xl flex flex-col md:flex-row items-center  justify-center w-full h-full md:h-[500px] gap-8">
+      className="bg-white my-5 pt-4 pl-3 rounded-lg shadow-2xl flex flex-col md:flex-row items-center  justify-center w-full h-full md:h-[500px] gap-8">
         <div className='flex flex-col items-center justify-center'>
         {/* Product Image */}
         <motion.img
