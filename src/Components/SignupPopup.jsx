@@ -6,7 +6,7 @@ const SignupPopup = ({ show, onClose, onSignup }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black/70 bg-opacity-50 flex items-center justify-center z-50"
       onClick={onClose}
     >
       <div
@@ -23,13 +23,13 @@ const SignupPopup = ({ show, onClose, onSignup }) => {
         <div className="flex justify-between gap-4">
           <button
             onClick={onSignup}
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
           >
             Signup
           </button>
           <button
             onClick={onClose}
-            className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+            className="bg-gray-300 px-4 py-2 rounded-lg hover:bg-gray-400"
           >
             Cancel
           </button>
