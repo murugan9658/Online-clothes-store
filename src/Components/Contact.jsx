@@ -85,7 +85,7 @@ const LevisFooter = () => {
       </div>
      <footer className='flex md:flex-row flex-col  items-center  justify-center gap-4 bg-gray-400  p-4'>
                    <div>
-                   <p className='md:text-lg  font-semibold'>&copy; {new Date().getFullYear()} E-commerce clothes store    ||</p>
+                   <p className='md:text-lg  font-semibold'>&copy; {new Date().getFullYear()} GV fashion store    ||</p>
                    </div>
                    <div className='pb-2 md:pb-0'>
                       <ul className='flex flex-row gap-4 text-2xl'>
