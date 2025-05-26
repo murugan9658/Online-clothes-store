@@ -42,22 +42,26 @@ const ProductList = () => {
 
   return (
     <div className="product-list-container bg-gray-100 pt-4 shadow-lg">
-      <motion.h1
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          whileHover={{ scale: 1.05, color: "#3B82F6" }} 
-          whileTap={{ scale: 0.95 }}     
-          className="text-3xl text-center font-bold text-orange-400">Discover Our Products
-      </motion.h1>
-      <motion.h2 
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          whileHover={{ scale: 1.05, color: "#f97316"  }} 
-          whileTap={{ scale: 0.95 }}   
-          className="text-center text-xl font-semibold text-blue-400  ">Filter by Category
-      </motion.h2>
+      <div className="felx flex-col text-center items-center justify-center">
+          <h1>   
+              < motion.span
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.05, color: "#6b7280" }} 
+              whileTap={{ scale: 0.95 }} 
+              className="text-3xl  font-bold text-orange-400 inline-block" >Discover Our Products</motion.span>
+          </h1>
+          <h2>   
+              < motion.span
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.05, color: "#3B82F6" }} 
+              whileTap={{ scale: 0.95 }} 
+              className="text-2xl  font-bold text-blue-500 inline-block" >Filter by category</motion.span>
+          </h2>
+      </div>
       <div className="flex justify-center gap-4 p-4">
         <button className="cursor-pointer py-0.5 px-3.5 font-bold hover:bg-green-500 hover:text-black transition duration-500 rounded-md bg-green-300 text-fuchsia-500" onClick={() => setFilter("All")}>All</button>
         <button className="cursor-pointer py-0.5 px-3.5 font-bold hover:bg-green-500 hover:text-black transition duration-500 rounded-md bg-green-300 text-fuchsia-500" onClick={() => setFilter("Men")}>Men</button>
