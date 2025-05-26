@@ -1,5 +1,3 @@
-import React from 'react'
-import{Element} from 'react-scroll';
 import ProductList from '../Components/ProductList'
 import ImageSlider from '../Components/CategorySlide'
 import ReviewSlider from '../Components/ReviewSlide'
