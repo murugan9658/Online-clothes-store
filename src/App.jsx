@@ -12,13 +12,16 @@ import AddCartPage from './Pages/AddCartPage'
 import ProductDetailPage from './Pages/ProductDetailpage'
 import PaymentPage from './Pages/PaymentPage'
 import LivesFooter from './Components/Contact'
+import ScrollToTop from './Components/ScrollToTop'
 
 
 function App() {
    return (
     <AuthProvider>
-      <CartProvider>
+      <CartProvider>       
             <Router>
+              {/* ScrollToTop component to reset scroll position on specific routes */}
+              <ScrollToTop />             
               <Navbar/>
                 <Routes>
                   <Route path='/' element={<Home/>}  />
