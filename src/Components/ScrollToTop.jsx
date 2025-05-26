@@ -1,18 +1,26 @@
-// src/components/ScrollToTop.jsx
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const location = useLocation();
+
+  // Define routes that require scroll-to-top
+  const scrollRoutes = [
+    "/login",
+    "/signup",
+    "/profile",
+    "/cart",
+  ];
+
+  // Dynamic path match (for products/:id and payment/:id)
+  const dynamicMatch = (pathname) =>
+    pathname.startsWith("/products/") || pathname.startsWith("/payment/");
 
   useEffect(() => {
-    // Only scroll to top for login or signup routes
-    const scrollRoutes = ["/login", "/signup","/profile"];
-
-    if (scrollRoutes.includes(pathname)) {
-      window.scrollTo(0, 0);
+    if (scrollRoutes.includes(location.pathname) || dynamicMatch(location.pathname)) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [pathname]);
+  }, [location.key]);
 
   return null;
 };
