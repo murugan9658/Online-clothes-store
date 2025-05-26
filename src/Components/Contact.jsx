@@ -6,6 +6,7 @@ import { FaWhatsappSquare } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import{Element} from 'react-scroll';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -21,7 +22,7 @@ const fadeIn = {
 
 const LevisFooter = () => {
   return (
-    <div   className="bg-gray-200 shadow-md text-black/90 pt-10 ">
+    <Element name="contact"  className="bg-gray-200 shadow-md text-black/90 pt-10 ">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 px-6 pb-4 md:px-20 ">
         {/* About Section */}
         <motion.div custom={0} initial="hidden" animate="visible" variants={fadeIn}>
@@ -99,7 +100,7 @@ const LevisFooter = () => {
                    </div>
        </footer>
        
-    </div>
+    </Element>
 
     
   );

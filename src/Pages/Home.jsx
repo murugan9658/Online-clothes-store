@@ -23,10 +23,7 @@ const Home = () => {
         <Element name="ReviewSlider" className="element py-10">
             <ReviewSlider />
         </Element>
-        <Element name="contact" className="element">
-            <Contact />
-            
-        </Element>
+
 
     </div>
   )
