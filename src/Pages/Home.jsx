@@ -1,7 +1,6 @@
 import React from 'react'
 import{Element} from 'react-scroll';
 import ProductList from '../Components/ProductList'
-import Contact from '../Components/Contact'
 import ImageSlider from '../Components/CategorySlide'
 import ReviewSlider from '../Components/ReviewSlide'
 import LandingSlider from '../Components/Hero';
@@ -9,20 +8,20 @@ import LandingSlider from '../Components/Hero';
 const Home = () => {
   return (
     <div > 
-        <Element name="hero" className="element">
+        <section id="hero" className="element scroll-mt-20">
             <LandingSlider />
-        </Element>
-        <Element name="ImageSlider" className="element py-15">
+        </section>
+        <section id="ImageSlider" className="element py-15">
             <ImageSlider />
-        </Element>
+        </section>
 
-        <Element name="product" className="element">
+        <section id="product" className="element scroll-mt-20">
             <ProductList />
-        </Element>
+        </section>
 
-        <Element name="ReviewSlider" className="element py-10">
+        <section id="ReviewSlider" className="element py-10 scroll-mt-20">
             <ReviewSlider />
-        </Element>
+        </section>
 
 
     </div>
