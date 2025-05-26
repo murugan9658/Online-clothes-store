@@ -3,8 +3,9 @@ import Fuse from "fuse.js";
 import products from "../Data/products";
 import { FaSearch } from "react-icons/fa";
 import { useCart } from '../hooks/useCart'; // Importing the custom hook to access cart context
-import { Link } from "react-router-dom"; // Importing Link for navigation
-import { motion, } from "framer-motion"; // Importing motion for animations
+import { Link } from "react-router-dom"; 
+import { motion, } from "framer-motion"; 
+import SignupPopupWrapper from "../Components/SignupPopupWrapper";
 
 const ProductList = () => {
   const { addToCart } = useCart(); // Importing the addToCart function from CartContext
@@ -41,6 +42,8 @@ const ProductList = () => {
   }, [filter, searchQuery]); // Whenever filter or search changes, this will run
 
   return (
+     <SignupPopupWrapper>
+      {({ handleAddToCart }) => (
     <div className="product-list-container bg-gray-100 pt-4 shadow-lg">
       <div className="felx flex-col text-center items-center justify-center">
           <h1>   
@@ -121,7 +124,7 @@ const ProductList = () => {
                           <p className="italic">{product.description}</p>
               </Link>
                       <button 
-                      onClick={() => addToCart(product)}
+                       onClick={() => handleAddToCart(product)}
                       className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 hover:scale-105 capitalize transition duration-300">
                         add to cart
                       </button>
@@ -133,6 +136,8 @@ const ProductList = () => {
         )}
       </div>
     </div>
+       )}
+    </SignupPopupWrapper>
   );
 };
 
