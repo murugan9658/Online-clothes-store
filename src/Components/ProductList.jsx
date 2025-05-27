@@ -2,13 +2,11 @@ import { useState, useEffect } from "react";
 import Fuse from "fuse.js";
 import products from "../Data/products";
 import { FaSearch } from "react-icons/fa";
-import { useCart } from '../hooks/useCart'; // Importing the custom hook to access cart context
 import { Link } from "react-router-dom"; 
 import { motion, } from "framer-motion"; 
 import SignupPopupWrapper from "../Components/SignupPopupWrapper";
 
 const ProductList = () => {
-  const { addToCart } = useCart(); // Importing the addToCart function from CartContext
   const [filter, setFilter] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(products);

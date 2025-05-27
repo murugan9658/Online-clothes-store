@@ -5,12 +5,14 @@ import { useCart } from "../hooks/useCart";
 import { useNavigate, useLocation } from "react-router-dom";
 import SignupPopup from "./SignupPopup";
 
+
 const SignupPopupWrapper = ({ children }) => {
   const { user } = useAuth();
   const { addToCart, isAlreadyInCart } = useCart();
   const [showPopup, setShowPopup] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+ 
 
   // Show popup once after 10s if user not logged in on home page
   useEffect(() => {
@@ -24,19 +26,15 @@ const SignupPopupWrapper = ({ children }) => {
     }
   }, [user, location]);
 
-  const handleAddToCart = (product) => {
-    if (!user) {
-      setShowPopup(true);
-      return;
-    }
+   const handleAddToCart = (product) => {
+  if (!user) {
+    setShowPopup(true);  // Show the popup modal instead of alert
+    return;
+  }
 
-    if (isAlreadyInCart(product.id)) {
-      alert("⚠️ Product already in cart!");
-    } else {
-      addToCart(product);
-      alert("✅ Product added to cart!");
-    }
-  };
+  const message = addToCart(product);
+  alert(message);
+   };
 
   return (
     <>

@@ -18,7 +18,7 @@ import ScrollToTop from './Components/ScrollToTop'
 function App() {
    return (
     <AuthProvider>
-      <CartProvider>       
+      <CartProvider>           
             <Router>
               {/* ScrollToTop component to reset scroll position on specific routes */}
               <ScrollToTop />             
@@ -33,7 +33,7 @@ function App() {
                   <Route path='/payment/:id' element={<PaymentPage/>}  />
                 </Routes> 
             </Router>
-            <LivesFooter/>
+            <LivesFooter/>           
       </CartProvider>
   </AuthProvider>
     
