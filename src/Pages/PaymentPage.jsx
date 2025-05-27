@@ -41,7 +41,7 @@ function PaymentPage() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-    className="p-6 max-w-md mx-auto my-3.5 bg-gray-200 rounded shadow-lg">
+    className="p-6 max-w-md mx-3.5 sm:mx-auto my-3.5  bg-gray-200 rounded shadow-lg">
         {/* image show*/}
         <div className="flex flex-col items-center space-y-4">
             <motion.img
