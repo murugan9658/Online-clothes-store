@@ -50,7 +50,7 @@ function ProductDetailPage() {
 
 
   return (
-    <div className="flex justify-center items-center bg-gray-100">
+    <div className="flex justify-center font-playfair items-center bg-gray-100">
       <motion.div 
       variants={containerVariants}
       initial="hidden"
@@ -72,7 +72,7 @@ function ProductDetailPage() {
         <div className='flex flex-col items-start mb-4 justify-center'>
 
         {/* Product Details */}
-        <h2 className="text-2xl font-semibold mb-2">{product.name}</h2>
+        <h2 className="text-2xl font-semibold font-dancing mb-2">{product.name}</h2>
         <p className="text-xl font-bold text-gray-800">{product.price}</p>
         <p className="text-sm text-gray-600 mb-4 ">{product.description}</p>
 
