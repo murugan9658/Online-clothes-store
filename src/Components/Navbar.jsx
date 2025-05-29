@@ -36,10 +36,10 @@ const Navbar = () => {
         <div className='flex items-center space-x-2'>
           {/* Logo */} 
         <FaShoppingBag  className='text-3xl text-orange-400'/>
-          <h1 className='md:text-2xl'>GV fashion store</h1>
+          <h1 className='md:text-2xl flex flex-row gap-2 font-berkshire'>GV <span className='hidden md:flex'>fashion store</span></h1>
         </div>
 
-      <ul className=" hidden md:flex space-x-4 text-lg font-semibold items-center">
+      <ul className=" hidden md:flex font-playfair space-x-4 text-lg font-semibold items-center">
         <li className='cursor-pointer hover:text-orange-400 hover:scale-105 transition duration-400'>
           <HashLink smooth to={createLink("hero")} >
              Hero
@@ -74,7 +74,7 @@ const Navbar = () => {
       <div className='flex items-center space-x-6'>
       <RouterLink
         to="/login"
-        className=" flex cursor-pointer px-4 py-1 rounded-lg bg-orange-400 hover:text-blue-500 hover:scale-105 transition-transform duration-300 text-xl
+        className=" flex cursor-pointer font-berkshire px-4 py-1 rounded-lg bg-orange-400 hover:text-blue-500 hover:scale-105 transition-transform duration-300 text-xl
         text-white font-serif"
       >
         Login
