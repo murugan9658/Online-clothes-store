@@ -41,7 +41,7 @@ function PaymentPage() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-    className="p-6 max-w-md mx-3.5 sm:mx-auto my-3.5  bg-gray-200 rounded shadow-lg">
+    className="p-6 max-w-md mx-3.5 sm:mx-auto my-3.5 font-playfair  bg-gray-200 rounded shadow-lg">
         {/* image show*/}
         <div className="flex flex-col items-center space-y-4">
             <motion.img
@@ -50,7 +50,7 @@ function PaymentPage() {
             className="w-50 h-60 rounded-md "/>
            <motion.h2 
            variants={itemVariants}
-           className="text-xl font-bold text-yellow-500 mb-4"> {product.name}</motion.h2>
+           className="text-xl font-bold text-yellow-500 font-dancing mb-4"> {product.name}</motion.h2>
             <motion.p
             variants={itemVariants}
             className="mb-2 text-green-600 font-semibold">Price: {product.price}</motion.p>
@@ -60,7 +60,7 @@ function PaymentPage() {
       <div className="mb-4">
         <motion.label 
         variants={itemVariants}
-        className="block font-semibold text-2xl hover:scale-105 duration-500 mb-2">Select Payment Method:</motion.label>
+        className="block font-semibold text-2xl  mb-2">Select Payment Method:</motion.label>
         <div className="space-x-4">
           <motion.label
           variants={itemVariants}
@@ -104,7 +104,7 @@ function PaymentPage() {
 
         <motion.button 
         variants={itemVariants}
-        type="submit" className="w-full bg-blue-600 hover:font-semibold hover:bg-blue-800 hover:scale-105 duration-300 text-white py-2 rounded">
+        type="submit" className="w-full bg-blue-600 hover:font-semibold hover:bg-blue-700  duration-300 text-white py-2 rounded">
           Pay Now
         </motion.button>
       </form>
