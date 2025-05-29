@@ -42,17 +42,17 @@ const SignupPopup = ({ show, onClose, onSignup }) => {
             >
               <FiX size={24} />
             </button>
-            <h2 className="text-xl font-semibold mb-4 italic">Please Signup First</h2>
+            <h2 className="text-xl font-semibold mb-4 font-playfair italic">Please Signup First</h2>
             <div className="flex justify-between gap-4">
               <button
                 onClick={onSignup}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                className="bg-blue-600 text-white font-playfair px-4 py-2 rounded-lg hover:bg-blue-700"
               >
                 Signup
               </button>
               <button
                 onClick={onClose}
-                className="bg-gray-300 px-4 py-2 rounded-lg hover:bg-gray-400"
+                className="bg-gray-300 font-playfair px-4 py-2 rounded-lg hover:bg-gray-400"
               >
                 Later
               </button>
