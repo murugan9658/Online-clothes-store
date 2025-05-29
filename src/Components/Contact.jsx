@@ -26,7 +26,7 @@ const LevisFooter = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10 px-6 pb-4 md:px-20 ">
         {/* About Section */}
         <motion.div custom={0} initial="hidden" animate="visible" variants={fadeIn}>
-          <h3 className="text-lg font-semibold mb-4">MORE ABOUT GV FASHION STORE</h3>
+          <h3 className="text-lg font-semibold font-playfair mb-4">MORE ABOUT GV FASHION STORE</h3>
           <p className="text-sm text-black/55">
             Discover authentic Gv’s denim & clothing. Shop now for timeless style, comfort, and quality.
           </p>
@@ -34,7 +34,7 @@ const LevisFooter = () => {
 
         {/* Quick Links */}
         <motion.div custom={1} initial="hidden" animate="visible" variants={fadeIn}>
-          <h3 className="text-lg font-semibold mb-4">QUICK LINKS</h3>
+          <h3 className="text-lg font-semibold font-playfair mb-4">QUICK LINKS</h3>
           <ul className="space-y-1 text-sm text-black/55">
             {["Men's Jeans", "Women’s Jeans", "Men’s T-shirts", "Women’s Tops", "Footwear", "Men’s Jackets", "Red Tab Member Program", "Store Locator"].map((item, index) => (
               <li key={index} ><a className="hover:text-black transition duration-300" >{item}</a></li>
@@ -44,7 +44,7 @@ const LevisFooter = () => {
 
         {/* Support */}
         <motion.div custom={2} initial="hidden" animate="visible" variants={fadeIn}>
-          <h3 className="text-lg font-semibold  mb-4">SUPPORT</h3>
+          <h3 className="text-lg font-semibold font-playfair  mb-4">SUPPORT</h3>
           <ul className="space-y-1 text-sm text-black/55 ">
             <li className="hover:text-black transition duration-300">Help</li>
             <li className="hover:text-black transition duration-300">Returns & Exchanges</li>
@@ -52,7 +52,7 @@ const LevisFooter = () => {
             <li className="hover:text-black transition duration-300">About Us</li>
           </ul>
 
-          <h4 className="text-md font-semibold mt-4">CONTACT</h4>
+          <h4 className="text-md font-semibold font-playfair mt-4">CONTACT</h4>
           <ul className="text-sm mt-1 space-y-1 text-black/55">
             <li className="hover:text-black transition duration-300">📧 <span className="font-medium">Customer Care:</span> customercare@GV fashion.in</li>
             <li className="hover:text-black transition duration-300">📧 <span className="font-medium">Escalation:</span> feedback@GV fashion.in</li>
@@ -64,7 +64,7 @@ const LevisFooter = () => {
 
         {/* Subscribe */}
         <motion.div custom={3} initial="hidden" animate="visible" variants={fadeIn}>
-          <h3 className="text-lg font-semibold text-green-500 mb-4">Subscribe GV FASHION STORE</h3>
+          <h3 className="text-lg font-semibold font-playfair text-green-500 mb-4">Subscribe GV FASHION STORE</h3>
           <form className="space-y-3">
             <input
               type="email"
@@ -73,7 +73,7 @@ const LevisFooter = () => {
             />
             <button
               type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 transition text-white py-2 rounded"
+              className="w-full bg-blue-600 font-playfair hover:bg-blue-700 transition text-white py-2 rounded"
             >
               Subscribe
             </button>
@@ -85,7 +85,7 @@ const LevisFooter = () => {
       </div>
      <footer className='flex md:flex-row flex-col  items-center  justify-center gap-4 bg-gray-400  p-4'>
                    <div>
-                   <p className='md:text-lg  font-semibold'>&copy; {new Date().getFullYear()} GV fashion store    ||</p>
+                   <p className='md:text-lg  font-semibold'>&copy; {new Date().getFullYear()} <span className="font-playfair">GV fashion store  </span>   ||</p>
                    </div>
                    <div className='pb-2 md:pb-0'>
                       <ul className='flex flex-row gap-4 text-2xl'>

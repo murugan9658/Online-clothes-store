@@ -1,1 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Cookie&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 @import "tailwindcss";
+
+.font-berkshire {
+  font-family: 'Berkshire Swash', cursive;
+}
+.font-cookie {
+  font-family: 'Cookie', cursive;
+}
+.font-dancing {
+  font-family: 'Dancing Script', cursive;
+}
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}

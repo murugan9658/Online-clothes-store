@@ -8,9 +8,10 @@ import SignupPopupWrapper from "../Components/SignupPopupWrapper";
 
 const ProductList = () => {
   const [filter, setFilter] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
+  const [typedQuery, setTypedQuery] = useState(""); // Input value only
+  const [searchQuery, setSearchQuery] = useState(""); // Triggers search
   const [filteredProducts, setFilteredProducts] = useState(products);
-  const [showAll, setShowAll] = useState(false); // 👈 new state
+  const [showAll, setShowAll] = useState(false);
 
   const fuse = new Fuse(products, {
     keys: ["name", "description", "category"],
@@ -36,7 +37,7 @@ const ProductList = () => {
     }
 
     setFilteredProducts(updatedProducts);
-    setShowAll(false); // 👈 Reset to first 12 whenever filter/search changes
+    setShowAll(false);
   }, [filter, searchQuery]);
 
   return (
@@ -51,7 +52,7 @@ const ProductList = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.05, color: "#6b7280" }}
                 whileTap={{ scale: 0.95 }}
-                className="text-3xl font-bold text-orange-400 inline-block"
+                className="text-3xl font-bold font-berkshire text-orange-400 inline-block"
               >
                 Discover Our Products
               </motion.span>
@@ -63,14 +64,15 @@ const ProductList = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.05, color: "#3B82F6" }}
                 whileTap={{ scale: 0.95 }}
-                className="text-2xl font-bold text-blue-500 inline-block"
+                className="text-2xl font-bold font-cookie text-blue-500 inline-block"
               >
                 Filter by category
               </motion.span>
             </h2>
           </div>
 
-          <div className="flex justify-center gap-4 p-4">
+          {/* Filter Buttons */}
+          <div className="flex justify-center font-playfair gap-4 p-4">
             {["All", "Men", "Women", "Kids"].map((cat) => (
               <button
                 key={cat}
@@ -82,31 +84,49 @@ const ProductList = () => {
             ))}
           </div>
 
-              
-      <div className="search-container flex justify-center items-center gap-2 p-4">
-        {/* Smooth expanding search input */}
-        <motion.input
-          type="text"
-          placeholder="Search products..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          initial={{ width: "160px" }}
-          whileFocus={{ width: "256px" }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="p-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+          {/* Search */}
+          <div className="search-container flex justify-center items-center gap-2 p-4">
+            <motion.input
+              type="text"
+              placeholder="Search products..."
+              value={typedQuery}
+              onChange={(e) => setTypedQuery(e.target.value)}
+              initial={{ width: "160px" }}
+              whileFocus={{ width: "256px" }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="p-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
 
-        {/* Animated hover button */}
-        <motion.button
-          whileHover={{ scale: 1.1, backgroundColor: "#2563EB", boxShadow: "0 4px 12px rgba(0,0,0,0.2)" }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 300 }}
-          className="p-2 bg-blue-400 text-white rounded-md"
-        >
-          <FaSearch />
-        </motion.button>
-      </div>
+            <motion.button
+              onClick={() => setSearchQuery(typedQuery)}
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "#2563EB",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.2)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="p-2 bg-blue-400 text-white rounded-md"
+            >
+              <FaSearch />
+            </motion.button>
+            {searchQuery && (
+                <motion.button
+                  onClick={() => {
+                    setTypedQuery("");
+                    setSearchQuery("");
+                  }}
+                  whileHover={{ scale: 1.05, backgroundColor: "#DC2626" }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 250 }}
+                  className="py-1 px-3 bg-red-500  text-white rounded-md"
+                >
+                  Clear
+                </motion.button>
+              )}
+          </div>
 
+          {/* Product Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-center text-center items-center p-8">
             {filteredProducts.length > 0 ? (
               (showAll
@@ -130,23 +150,19 @@ const ProductList = () => {
                         className="w-full h-80 rounded-md group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
-                    <h2 className="text-lg font-bold">{product.name}</h2>
-                    <div className="flex justify-center gap-2 items-center">
+                    <h2 className="text-lg font-bold font-playfair">{product.name}</h2>
+                    <div className="flex justify-center font-cookie gap-2 items-center">
                       <p className="text-blue-500">
                         {product.price}
-                        <span className="line-through text-black/50 ml-2">
-                          $100
-                        </span>
+                        <span className="line-through text-black/50 ml-2">$100</span>
                       </p>
-                      <h2 className="text-green-600 text-lg font-light">
-                        {product.offer}
-                      </h2>
+                      <h2 className="text-green-600 text-lg font-light">{product.offer}</h2>
                     </div>
-                    <p className="italic">{product.description}</p>
+                    <p className="italic font-playfair pb-2">{product.description}</p>
                   </Link>
                   <button
                     onClick={() => handleAddToCart(product)}
-                    className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 hover:scale-105 capitalize transition duration-300"
+                    className="bg-blue-500 text-white font-berkshire px-4 py-2 rounded-md hover:bg-blue-600 hover:scale-105 capitalize transition duration-300"
                   >
                     add to cart
                   </button>
@@ -157,7 +173,7 @@ const ProductList = () => {
             )}
           </div>
 
-          {/* Show More / Show Less Button */}
+          {/* Show More / Show Less */}
           {filteredProducts.length > 12 && (
             <div className="text-center mb-8">
               <button

@@ -61,7 +61,7 @@ const AutoSlider = () => {
   return (
     <div className="relative w-full mx-auto py-20 shadow-lg bg-gray-100 flex items-center justify-center">
         <div className="absolute top-2 left-1/2 transform -translate-x-1/2  ">
-             <h3 className="text-orange-300 capitalize font-bold text-2xl md:text-3xl">fashion <span className="text-blue-500 italic"> Category</span></h3> {/* This is the header you wanted */}
+             <h3 className="text-orange-300 capitalize font-bold font-berkshire text-2xl md:text-3xl">fashion <span className="text-blue-500 italic"> Category</span></h3> {/* This is the header you wanted */}
         </div>
       
       {/* ← Arrow */}

@@ -74,12 +74,12 @@ const LandingSlider = () => {
                 transition={{ duration: 0.6 }}
                 className="relative z-10 flex-col md:space-y-14 space-y-8  px-6 text-center   md:ml-32    text-white max-w-xl "
               >
-                <h2 className="text-3xl md:text-5xl font-bold hover:scale-105 duration-300">{slides[index].title}</h2>
-                <p className=" text-base italic md:text-lg">{slides[index].desc}</p>
+                <h2 className="text-3xl md:text-5xl font-bold font-playfair">{slides[index].title}</h2>
+                <p className=" text-base italic md:text-lg font-berkshire">{slides[index].desc}</p>
                 <ScrollLink 
                 to="product" smooth={true} duration={700} offset={-70}
                 >
-                <button className=" text-white font-semibold bg-blue-400 px-6 py-2 rounded hover:scale-105 duration-500 hover:bg-blue-600 transition">
+                <button className=" text-white font-semibold  bg-blue-400 px-6 py-2 rounded hover:scale-105 duration-500 hover:bg-blue-600 transition">
                   {slides[index].button}
                 </button>
                 </ScrollLink>

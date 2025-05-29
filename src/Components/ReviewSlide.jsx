@@ -95,8 +95,8 @@ const ReviewSlider = () => {
               <p className="text-lg italic text-gray-700 mb-4">
                 "{reviews[currentIndex].review}"
               </p>
-              <h4 className="font-semibold text-gray-900">{reviews[currentIndex].name}</h4>
-              <p className="text-sm text-gray-500">{reviews[currentIndex].role}</p>
+              <h4 className="font-semibold font-playfair text-gray-900">{reviews[currentIndex].name}</h4>
+              <p className="text-sm font-playfair text-gray-500">{reviews[currentIndex].role}</p>
             </div>
           </motion.div>
 
